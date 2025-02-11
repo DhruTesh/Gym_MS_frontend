@@ -5,6 +5,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import Dashboard from './Pages/Dashboard/dashboard'
 import Sidebar from './Components/Sidebar/sidebar'
 import { useState, useEffect } from 'react'
+import Member from './Pages/Member/member'
 
 function App() {
   const navigate = useNavigate();
@@ -14,8 +15,11 @@ function App() {
     let isLogedIn = sessionStorage.getItem('isLogin');
     if (isLogedIn) {
       setIsLogin(true);
-      navigate('/dashboard')
+      // navigate('/dashboard')
 
+    }else{
+      setIsLogin(false)
+      navigate('/');
     }
   }, [sessionStorage.getItem("isLogin")])
 
@@ -30,6 +34,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path="/member" element={<Member />} />
         </Routes>
 
       </div>

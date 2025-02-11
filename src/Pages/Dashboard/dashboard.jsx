@@ -46,54 +46,54 @@ const Dashboard = () => {
 
             <div className='mt-5 pt-3 bg-slate-100 bg-opacity-50 grid gap-5 grid-cols-3 w-full pb-5 overflow-x-auto h-[80%]'>
 
-                <div className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
+                <Link to={"/member"} className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
                     <div className='h-3 rounded-t-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'></div>
 
                     <div className='py-7 px-5 flex-col justify-center items-center w-full text-center rounded-b-lg hover:bg-slate-900 hover:text-white '>
                         <PeopleIcon sx={{ color: "green", fontSize: "50px" }} />
                         <p className='text-xl my-3 font-semibold font-mono'>Joined Members</p>
                     </div>
-                </div>
+                </Link>
 
 
-                <div className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
+                <Link to={'/specific/monthly'} className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
                     <div className='h-3 rounded-t-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'></div>
 
                     <div className='py-7 px-5 flex-col justify-center items-center w-full text-center rounded-b-lg hover:bg-slate-900 hover:text-white '>
                         <SignalCellularAltIcon sx={{ color: "purple", fontSize: "50px" }} />
                         <p className='text-xl my-3 font-semibold font-mono'>Monthly Joined</p>
                     </div>
-                </div>
+                </Link>
 
 
-                <div className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
+                <Link to={'/specific/expire-with-in-3-days'}className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
                     <div className='h-3 rounded-t-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'></div>
 
                     <div className='py-7 px-5 flex-col justify-center items-center w-full text-center rounded-b-lg hover:bg-slate-900 hover:text-white '>
                         <AccessAlarmIcon sx={{ color: "red", fontSize: "50px" }} />
                         <p className='text-xl my-3 font-semibold font-mono'>Expiring within 3 days</p>
                     </div>
-                </div>
+                </Link>
 
 
-                <div className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
+                <Link to={'/specific/expire-with-in-4-7-days'} className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
                     <div className='h-3 rounded-t-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'></div>
 
                     <div className='py-7 px-5 flex-col justify-center items-center w-full text-center rounded-b-lg hover:bg-slate-900 hover:text-white '>
                         <AccessAlarmIcon sx={{ color: "red", fontSize: "50px" }} />
                         <p className='text-xl my-3 font-semibold font-mono'>Expiring within 4-7 days</p>
                     </div>
-                </div>
+                </Link>
 
 
-                <div className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
+                <Link to={'/specific/expired'} className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
                     <div className='h-3 rounded-t-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'></div>
 
                     <div className='py-7 px-5 flex-col justify-center items-center w-full text-center rounded-b-lg hover:bg-slate-900 hover:text-white '>
                         <ErrorIcon sx={{ color: "red", fontSize: "50px" }} />
                         <p className='text-xl my-3 font-semibold font-mono'>Expired</p>
                     </div>
-                </div>
+                </Link>
 
 
                 <div className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
@@ -110,9 +110,9 @@ const Dashboard = () => {
 
             </div>
 
-            <div className='md:bottom-4 p-4 w-3/4 mb-4 md:mb-0 absolute bg-black text-white mt-20 rounded-xl text-xl'>
+            {/* <div className='md:bottom-4 p-4 w-3/4 mb-4 md:mb-0 absolute bg-black text-white mt-20 rounded-xl text-xl'>
                 Contact Developer for any Technical Error at +91**********
-            </div>
+            </div> */}
         </div>
     )
 }
