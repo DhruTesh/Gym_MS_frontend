@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './signUp.css'
-import Modal from '../Modal/Modal'
+import Modal from '../Modal/modal';
 import ForgotPassword from '../ForgotPassword/forgotPassword';
 
 
