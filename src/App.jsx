@@ -6,6 +6,7 @@ import Dashboard from './Pages/Dashboard/dashboard'
 import Sidebar from './Components/Sidebar/sidebar'
 import { useState, useEffect } from 'react'
 import Member from './Pages/Member/member'
+import GeneralUser from './Pages/GeneralUser/generalUser'
 
 function App() {
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path="/member" element={<Member />} />
+          <Route path='/specific/:page' element={<GeneralUser />} />
         </Routes>
 
       </div>
