@@ -11,6 +11,11 @@ const Addmembers = () => {
             <input   type='date' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12' />
 
             <select className='border-2 w-[90%] h-12 pt-2 pb-2 border-slate-400 rounded-md palceholder:text-gray'>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <select className='border-2 w-[90%] h-12 pt-2 pb-2 border-slate-400 rounded-md palceholder:text-gray'>
                 <option>1 Month Membership</option>
                 <option>2 Month Membership</option>
             </select>
