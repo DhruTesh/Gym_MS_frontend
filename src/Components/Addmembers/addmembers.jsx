@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 
 const Addmembers = () => {
+    const [inputField, setInputField] = useState({ name: "", mobileNo: "", address: "", gender: "", membership: "", profilePic: "https://wallpaperaccess.com/full/939999.jpg", joiningDate: "" })
+
+    const handleOnChange = (event, name) => {
+        setInputField({ ...inputField, [name]: event.target.value })
+      }
+      console.log(inputField)
+      
     return (
         <div className='text-black'>
             <div className='grid gap-5 grid-cols-2 text-lg'>
 
-            <input  placeholder='Name of the Joinee' type='text' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12' />
-            <input  placeholder='Mobile No.' type='text' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12' />
-            <input  placeholder='Address' type='text' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12' />
-            <input   type='date' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12' />
+            <input value={inputField.name} onChange={(event) => { handleOnChange(event, "name") }} placeholder='Name of the Joinee' type='text' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12' />
+
+            <input  value={inputField.mobileNo} onChange={(event) => { handleOnChange(event, "mobileNo") }} placeholder='Mobile No.' type='text' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12' />
+
+            <input  value={inputField.address} onChange={(event) => { handleOnChange(event, "address") }} placeholder='Address' type='text' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12' />
+
+            <input   value={inputField.joiningDate} onChange={(event) => { handleOnChange(event, "joiningDate") }} type='date' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12' />
 
             <select className='border-2 w-[90%] h-12 pt-2 pb-2 border-slate-400 rounded-md palceholder:text-gray'>
                 <option>Male</option>
