@@ -29,7 +29,7 @@ const SignUp = () => {
         const data = new FormData();
         data.append("file", files[0]);
 
-        //   dbqh5hxme
+       
 
         data.append('upload_preset', 'gym-management');
 
